@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Wersja ECMAScript, do której kompilować
+    "module": "ESNext", // System modułów (Node.js używa commonjs)
+    "outDir": "./dist", // Katalog wyjściowy dla skompilowanych plików
+    "rootDir": "./src", // Katalog źródłowy plików TypeScript
+    "moduleResolution": "Node", // Określa sposób, w jaki TypeScript rozwiązuje moduły. Ustawienie na "node" jest zalecane, jeśli używasz Node.js.
+    "allowSyntheticDefaultImports": true, // Umożliwia importowanie domyślnych eksportów z modułów, które nie używają eksportów domyślnych.
+    "esModuleInterop": true, // Umożliwia zgodność z modułami CommonJS.
+    "skipLibCheck": true, // Pomija sprawdzanie typów w plikach deklaracji
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

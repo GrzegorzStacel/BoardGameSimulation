@@ -1,0 +1,30 @@
+{
+  "name": "boardgamesimulation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node-esm src/main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrzegorzStacel/BoardGameSimulation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrzegorzStacel/BoardGameSimulation/issues"
+  },
+  "homepage": "https://github.com/GrzegorzStacel/BoardGameSimulation#readme",
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
+}
