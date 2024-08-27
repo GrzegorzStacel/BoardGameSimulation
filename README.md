@@ -49,13 +49,13 @@ npm start
 
 **3.55 ms**
 
+# Testy jednostkowe
+
 ## Uruchamianie testów:
 
 ```bash
 npm test
 ```
-
-# Testy jednostkowe
 
 ## `readInputFile`
 
