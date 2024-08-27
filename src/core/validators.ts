@@ -1,11 +1,10 @@
 import { InputData } from "./types.js";
 
-export function isValidTeamName(name: string): boolean {
-  return /^[A-Za-z0-9]{1,10}$/.test(name);
-}
-
+// Funkcja walidująca dane wejściowe
+// Sprawdza poprawność liczby elementów oraz wartość każdego z nich
 export function validateInput(input: InputData): string | null {
-  if (input.length !== 6) return "error"; // Check for the correct number of elements
+  // Sprawdź, czy liczba elementów jest równa 6
+  if (input.length !== 6) return "error";
 
   const [teamA, speedA, teamB, speedB, boardX, boardY] = input;
 
@@ -18,9 +17,17 @@ export function validateInput(input: InputData): string | null {
   if (!Number.isInteger(speedA) || !Number.isInteger(speedB) || !Number.isInteger(boardX) || !Number.isInteger(boardY)) {
     return "error";
   }
+
+  // Sprawdź poprawność nazw drużyn oraz czy są one różne
   if (!isValidTeamName(teamA) || !isValidTeamName(teamB) || teamA === teamB) return "error";
+
+  // Sprawdź, czy prędkości oraz wymiary planszy są liczbami
   if (isNaN(speedA) || isNaN(speedB) || isNaN(boardX) || isNaN(boardY)) return "error";
+
+  // Sprawdź, czy prędkości są w dozwolonym zakresie (1-3)
   if (speedA < 1 || speedA > 3 || speedB < 1 || speedB > 3) return "error";
+
+  // Sprawdź, czy wymiary planszy są w dozwolonym zakresie (1-1000)
   if (boardX < 1 || boardX > 1000 || boardY < 1 || boardY > 1000) return "error";
 
   return null;

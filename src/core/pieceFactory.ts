@@ -1,10 +1,14 @@
 import { Piece } from "./types.js";
 
+// Funkcja tworząca obiekty dla drużyn na planszy
 export function createPieces(boardX: number, speedA: number, speedB: number, boardY: number): { teamAPieces: Piece[]; teamBPieces: Piece[] } {
   const teamAPieces: Piece[] = [];
   const teamBPieces: Piece[] = [];
 
   for (let x = 0; x < boardX; x++) {
+    // x % 2 === 0 - sprawdzamy czy liczba x jest parzysta czy nieparzysta
+    // Math.pow() - używamy potęgowania, aby dostosować prędkość
+
     // Obliczanie prędkości dla drużyny A
     const vA = (x % 2 === 0 ? 1 * speedA : Math.pow(2, speedA)) * -1;
 
