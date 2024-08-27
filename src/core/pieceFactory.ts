@@ -5,10 +5,12 @@ export function createPieces(boardX: number, speedA: number, speedB: number, boa
   const teamBPieces: Piece[] = [];
 
   for (let x = 0; x < boardX; x++) {
-    const vA = (x % 2 === 0 ? 1 : 2 ** speedA) * -1;
-    const vB = x % 2 === 0 ? 1 : 2 ** speedB;
-    teamAPieces.push({ x, y: 0, v: vA });
-    teamBPieces.push({ x, y: boardY - 1, v: vB });
+    // Obliczanie prędkości dla drużyny A
+    const vA = (x % 2 === 0 ? 1 * speedA : Math.pow(2, speedA)) * -1;
+
+    // Obliczanie prędkości dla drużyny B
+    const vB = x % 2 === 0 ? 1 * speedB : Math.pow(2, speedB);
+
   }
 
   return { teamAPieces, teamBPieces };
