@@ -25,7 +25,7 @@ export function readInputFile(filename: string): Promise<InputData | null> {
       }
 
       // Rozdzielanie zawartości pliku na linie, usuwanie białych znaków z początku i końca każdej linii
-      const input = data
+      const input = fileContent
         .trim()
         .split("\n")
         .map((line) => line.trim());
