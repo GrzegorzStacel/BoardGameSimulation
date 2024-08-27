@@ -8,6 +8,9 @@ export function readInputFile(filename: string): Promise<InputData | null> {
       // Konwertowanie Buffer na string
       const fileContent = data.toString();
 
+      // Sprawdzamy obecność znaków nie-ASCII w zawartości pliku
+      if (/[^ -~\n]/.test(fileContent)) {
+        // Jeśli występują znaki nie-ASCII, logujemy "error" i zwracamy null
         console.log("error");
         resolve(null);
         return;
