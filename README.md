@@ -30,10 +30,15 @@ npm start
 ## Dane wejściowe
 
 **Tokyo**
+
 **1**
+
 **Berlin**
+
 **2**
+
 **3**
+
 **7**
 
 ### Wynik
