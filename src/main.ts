@@ -7,11 +7,14 @@ async function main() {
   const start = performance.now(); // Start mierzenia czasu
 
   const input = await readInputFile("daneWejsciowe.txt");
-  if (!input) return; // Jeśli plik nie został wczytany, kończymy działanie funkcji
+  if (!input) {
+    console.log("error"); // Jeśli dane wejściowe są puste, wyświetl błąd
+    return;
+  }
 
   const validationError = validateInput(input);
   if (validationError) {
-    console.log(validationError);
+    console.log("error");
     return;
   }
 
