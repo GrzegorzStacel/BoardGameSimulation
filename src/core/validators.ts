@@ -25,3 +25,9 @@ export function validateInput(input: InputData): string | null {
 
   return null;
 }
+
+// Funkcja sprawdzająca poprawność nazwy drużyny
+// Nazwa drużyny jest uznawana za poprawną, jeśli składa się z 1-10 znaków alfanumerycznych
+export function isValidTeamName(name: string): boolean {
+  return /^[A-Za-z0-9]{1,10}$/.test(name);
+}
